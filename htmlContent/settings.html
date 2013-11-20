@@ -1,0 +1,51 @@
+<div class="{{id}}-settings-dialog modal">
+    <div class="modal-header">
+        <span class="title">{{title}} extension settings</span>
+    </div>
+    <div class="modal-body no-padding">
+        <div class="form-horizontal">
+            {{#settings}}
+
+                {{#input}}
+                <div class="control-group">
+                    <label class="control-label" for="{{name}}">{{title}}</label>
+                    <div class="controls">
+                        <input type="text" id="{{name}}" name="{{name}}" placeholder="{{default}}" value="{{value}}" />
+                    </div>
+                </div>
+                {{/input}}
+                {{#boolean}}
+                <div class="control-group">
+                    <label class="control-label" for="{{name}}">{{title}}</label>
+                    <div class="controls">
+                        <input type="checkbox" id="{{name}}" name="{{name}}" {{#value}}checked{{/value}}>
+                    </div>
+                </div>
+                {{/boolean}}
+                {{#select}}
+                <div class="control-group">
+                    <label class="control-label" for="{{name}}">{{title}}</label>
+                    <div class="controls">
+                        <select name="{{name}}" id="{{name}}">
+                        {{#options}}
+                            <option value="{{value}}" {{#selected}}selected{{/selected}}>{{title}}</option>
+                        {{/options}}
+                        </select>
+                    </div>
+                </div>
+                {{/select}}
+                {{#text}}
+                    <div class="text">{{title}}</div>
+                {{/text}}
+                {{#separator}}
+                    <hr>
+                {{/separator}}
+
+            {{/settings}}
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="dialog-button btn" data-button-id="close">Close</button>
+        <button class="dialog-button btn primary" data-button-id="save" >Save</button>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+{
+    "name": "brackets-settings-demo",
+    "title": "Brackets Settings UI demo",
+    "description": "Showcase the brackets-settings utility",
+    "homepage": "https://github.com/artoale/brackets-settings",
+    "version": "0.1.0",
+    "author": "Alessandro Artoni <artoale@gmail.com> (https://github.com/artoale)",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.31.0"
+    }
+}
