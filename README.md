@@ -30,22 +30,23 @@ and then, when you want to show up the modal dialog `settings.show();` which ret
 
 ##Settings API
 
-* `new Settings(extensionId, config, extensionName)`
- extensionId (string): The preference manager storage id (a namespaced string identifying your extension)
- config (Array): An array of describing the settings you want to control
- extensionName (string - optional): The extension name, used inside the UI modal dialog
+`new Settings(extensionId, config, extensionName)`
+extensionId (string): The preference manager storage id (a namespaced string identifying your extension)
+config (Array): An array of describing the settings you want to control
+extensionName (string - optional): The extension name, used inside the UI modal dialog
+
+`Settings#show()`: display the modal dialog
+
+`Settings#get(setting)`: returns the requested setting
+
+`Settings#getAll()`: returns all the settings
  
  
- * `Settings#show()`: display the modal dialog
- * `Settings#get(setting)`: returns the requested setting
- * `Settings#getAll()`: returns all the settings
- 
- 
- ##Configuration Array
+##Configuration Array
  
  The `Settings` constructor expect a config array. Each config object MUST provide a `type` property. Other properties depends on the specific type.
  
- ###Supported `type`s
+###Supported `type`s
 
 ####`input` 
 Display a simple input text with optional validation feature.
