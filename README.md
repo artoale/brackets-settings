@@ -4,6 +4,7 @@ Brackets Settings
 This library provide a simple yet powerful interface and UI to manage extension settings.
 You can see `Brackets Settings` in action by installing it "from URL" and running "Help > Show Demo Settings"
 
+![screenshot](screenshot/modal.png)
 ##Usage
 
 You need to download `lib/settings.js` and `htmlContent/settings.html` in the respective folder inside your extension. If you use a different tree structure
